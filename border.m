@@ -1,0 +1,15 @@
+img=imread('112.jpg');
+img=imresize (img, [500 500]);
+[y, x, c] = size (img);
+br=uint8 (zeros (y, 20, c)+400);
+br (:, :, [1, 2])=0;
+img1= [img br img];
+br=uint8(zeros(y, 20, c)+1000);
+br (:, :, [1, 2])=0;
+img2= [img br img];
+br=uint8(zeros(y, 20, c)+1000);
+br (:, :, [1, 2])=0;
+img3= [img br img];
+imshow(img3);
+img3= [img1 br img2];
+imshow(img3);
